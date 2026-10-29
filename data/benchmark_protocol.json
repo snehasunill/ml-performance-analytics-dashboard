@@ -1,0 +1,12 @@
+{
+  "model": "full-scale OpenCV RandomForest",
+  "sample_count": 32,
+  "stratification": "eight test samples per class, shuffled seed 42",
+  "repetitions": 5,
+  "resolutions": [
+    64,
+    128,
+    224
+  ],
+  "warning": "Small benchmark sample; accuracy is NOT full held-out score; CPU latency reflects current environment"
+}
