@@ -13,7 +13,7 @@ An interactive Tableau dashboard for comparing classification quality and CPU in
 - **Dynamic ranking:** configurations that meet the threshold are sorted by latency.
 - **Throughput:** comparison in images per second across nine configurations.
 
-At an F1 threshold of **0.85**, the fastest qualifying configuration in this benchmark was **CNN at 128 px** (macro F1 **0.8667**, median prediction latency approximately **7.57 ms**).
+At a minimum macro F1 threshold of 0.85, the 128-pixel CNN was the fastest qualifying configuration, reaching 0.8667 macro F1 with approximately 7.57 ms median prediction latency. At a threshold of 0.95, only ResNet18 at 128 pixels qualified, achieving 1.00 macro F1 with approximately 20.10 ms median prediction latency, demonstrating the trade-off between inference speed and classification performance.
 
 ## Experiment design
 
@@ -53,6 +53,17 @@ The included SQLite database allows regeneration of the report without model ret
 The interactive dashboard is available on [Tableau Public](https://public.tableau.com/app/profile/sneha.sunil4233/viz/ML_Performance_Analytics_Dashboard/MLPerformanceAnalyticsDashboard).
 
 The `tableau/` directory contains the editable Tableau workbook, while `reports/tableau_matched_summary.csv` contains the aggregated benchmark data used to build the visualizations.
+
+## Project Structure
+
+- `02_image_quality/quality/` — Shared image-processing and model utilities from the image corruption detection project.
+- `data/` — SQLite benchmark database.
+- `reports/` — Experiment results, SQL exports, and validation reports.
+- `tableau/` — Interactive Tableau workbook.
+- `tests/` — Automated validation tests.
+- `schema.sql` — Relational database schema.
+- `run_matched_benchmark.py` — Benchmark execution pipeline.
+- `finalize_matched.py` — Data aggregation and reporting.
 
 ## Tools
 
