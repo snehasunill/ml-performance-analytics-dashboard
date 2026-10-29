@@ -50,7 +50,9 @@ The included SQLite database allows regeneration of the report without model ret
 
 ## Tableau
 
-The live workbook is published on [Tableau Public](https://public.tableau.com/app/profile/sneha.sunil4233/viz/ML_Performance_Analytics_Dashboard/MLPerformanceAnalyticsDashboard). The data it visualizes is included in `reports/tableau_matched_summary.csv`. The editable Tableau `.twbx` file is **not part of this archive**; export it from Tableau Public/Desktop and add it separately if you want the repository to contain a portable workbook.
+The interactive dashboard is available on [Tableau Public](https://public.tableau.com/app/profile/sneha.sunil4233/viz/ML_Performance_Analytics_Dashboard/MLPerformanceAnalyticsDashboard).
+
+The `tableau/` directory contains the editable Tableau workbook, while `reports/tableau_matched_summary.csv` contains the aggregated benchmark data used to build the visualizations.
 
 ## Tools
 
